@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaShoppingCart } from "react-icons/fa";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
@@ -59,7 +60,12 @@ const Navbar = ({
           <div className="container  mx-auto flex flex-wrap pb-1 pt-1 pl-7 pr-7 flex-col md:flex-row items-center ">
             <Link href="/">
               <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 ">
-                <img src="/assets/logo2.png" alt="" width="80" height="80" />
+                <Image
+                  src="/assets/logo2.png"
+                  alt=""
+                  width="80"
+                  height="80"
+                ></Image>
               </a>
             </Link>
             <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-lg font-semibold justify-center">
@@ -96,28 +102,25 @@ const Navbar = ({
                   </div>
                   <ul className="py-1 text-sm text-gray-700 dark:text-gray-200">
                     <li>
-                      <a
-                        href="/myaccount"
-                        className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        My Account
-                      </a>
+                      <Link href="/myaccount">
+                        <a className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                          My Account
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/orders"
-                        className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Orders
-                      </a>
+                      <Link href="/orders">
+                        <a className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                          Orders
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Earnings
-                      </a>
+                      <Link href="#">
+                        <a className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                          Earnings
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                   <div className="py-1">

@@ -7,7 +7,7 @@ import Product from "../../Models/Product";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const slug = ({ buyNow, addToCart, product, variants }) => {
+const Slug = ({ buyNow, addToCart, product, variants }) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, setpin] = useState();
@@ -308,4 +308,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default slug;
+export default Slug;

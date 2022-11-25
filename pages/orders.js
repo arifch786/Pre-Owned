@@ -4,7 +4,7 @@ import Order from "../Models/Order";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-const orders = () => {
+const Orders = () => {
   const router = useRouter();
   useEffect(() => {
     if (!localStorage.getItem("token")) {
@@ -110,9 +110,9 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      orders: { order },
+      Orders: { order },
     }, // will be passed to the page component as props
   };
 }
 
-export default orders;
+export default Orders;
