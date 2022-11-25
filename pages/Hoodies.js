@@ -6,9 +6,9 @@ import mongoose from "mongoose";
 const Hoodies = ({ products }) => {
   return (
     <div>
-      <section class="text-gray-600 body-font">
-        <div class="container  mx-auto">
-          <div class="flex justify-center flex-wrap m-4">
+      <section className="text-gray-600 body-font">
+        <div className="container  mx-auto">
+          <div className="flex justify-center flex-wrap m-4">
             {Object.keys(products).length === 0 && (
               <p className="flex justify-center text-center text-red-600 mt-20 text-2xl font-bold font-mono">
                 Sorry! All Hoodies are currently out of stock.
@@ -22,22 +22,22 @@ const Hoodies = ({ products }) => {
                   key={products[item]._id}
                   href={`/Product/${products[item].slug}`}
                 >
-                  <div class="lg:w-2/5  md:w-3/4 xl:w-1/4 p-4 w-full cursor-pointer shadow-lg m-3">
-                    <a class="block relative rounded overflow-hidden">
+                  <div className="lg:w-2/5  md:w-3/4 xl:w-1/4 p-4 w-full cursor-pointer shadow-lg m-3">
+                    <a className="block relative rounded overflow-hidden">
                       <img
                         alt="ecommerce"
-                        class=" mx-auto h-[36vh] block"
+                        className=" mx-auto h-[36vh] block"
                         src={products[item].img}
                       />
                     </a>
-                    <div class="mt-4  text-center md:text-left">
-                      <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                    <div className="mt-4  text-center md:text-left">
+                      <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                         {products[item].catagory}
                       </h3>
-                      <h2 class="text-gray-900 title-font text-lg font-medium">
+                      <h2 className="text-gray-900 title-font text-lg font-medium">
                         {products[item].title}
                       </h2>
-                      <p class="mt-1">Rs {products[item].price}</p>
+                      <p className="mt-1">Rs {products[item].price}</p>
                       <div className="mt-1">
                         {products[item].size.includes("S") && (
                           <span className="border border-gray-600 px-1 mx-1">
@@ -67,22 +67,22 @@ const Hoodies = ({ products }) => {
                       </div>
                       <div className="mt-1">
                         {products[item].color.includes("yellow") && (
-                          <button class="border-2 border-gray-300 ml-1 bg-yellow-600 rounded-full w-6 h-6 focus:outline-none"></button>
+                          <button className="border-2 border-gray-300 ml-1 bg-yellow-600 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
                         {products[item].color.includes("red") && (
-                          <button class="border-2 border-gray-300 ml-1 bg-red-600 rounded-full w-6 h-6 focus:outline-none"></button>
+                          <button className="border-2 border-gray-300 ml-1 bg-red-600 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
                         {products[item].color.includes("blue") && (
-                          <button class="border-2 border-gray-300 ml-1 bg-blue-600 rounded-full w-6 h-6 focus:outline-none"></button>
+                          <button className="border-2 border-gray-300 ml-1 bg-blue-600 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
                         {products[item].color.includes("green") && (
-                          <button class="border-2 border-gray-300 ml-1 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>
+                          <button className="border-2 border-gray-300 ml-1 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
                         {products[item].color.includes("pink") && (
-                          <button class="border-2 border-gray-300 ml-1 bg-pink-400 rounded-full w-6 h-6 focus:outline-none"></button>
+                          <button className="border-2 border-gray-300 ml-1 bg-pink-400 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
                         {products[item].color.includes("purple") && (
-                          <button class="border-2 border-gray-300 ml-1 bg-purple-600 rounded-full w-6 h-6 focus:outline-none"></button>
+                          <button className="border-2 border-gray-300 ml-1 bg-purple-600 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
                       </div>
                     </div>

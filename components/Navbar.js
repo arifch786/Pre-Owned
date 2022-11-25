@@ -25,12 +25,12 @@ const Navbar = ({
   subTotal,
 }) => {
   const togglecart = () => {
-    if (ref.current.classList.contains("translate-x-full")) {
-      ref.current.classList.remove("translate-x-full");
-      ref.current.classList.add("translate-x-0");
-    } else if (!ref.current.classList.contains("translate-x-full")) {
-      ref.current.classList.remove("translate-x-0");
-      ref.current.classList.add("translate-x-full");
+    if (ref.current.classNameList.contains("translate-x-full")) {
+      ref.current.classNameList.remove("translate-x-full");
+      ref.current.classNameList.add("translate-x-0");
+    } else if (!ref.current.classNameList.contains("translate-x-full")) {
+      ref.current.classNameList.remove("translate-x-0");
+      ref.current.classNameList.add("translate-x-full");
     }
   };
 
@@ -90,9 +90,9 @@ const Navbar = ({
 
               {dropdown && (
                 <div className="absolute md:inline top-44   md:top-16  z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                  <div class="py-3 px-4 text-sm text-gray-900 dark:text-white">
+                  <div className="py-3 px-4 text-sm text-gray-900 dark:text-white">
                     <div>{user.name}</div>
-                    <div class="font-medium truncate">{user.email}</div>
+                    <div className="font-medium truncate">{user.email}</div>
                   </div>
                   <ul className="py-1 text-sm text-gray-700 dark:text-gray-200">
                     <li>

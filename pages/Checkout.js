@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { loadStripe } from "@stripe/stripe-js";
+
 import { useEffect } from "react";
 
 import { MdOutlinePayment } from "react-icons/md";
@@ -11,9 +11,6 @@ import {
   AiFillPlusCircle,
   AiFillMinusCircle,
 } from "react-icons/ai";
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-);
 
 const Checkout = ({ cart, subTotal, addToCart, removeFromCart, clearCart }) => {
   useEffect(() => {
